@@ -5,13 +5,13 @@ from django.views.generic.base import View
 
 import movie
 from .forms import  ReviewForm
-from .models import Movie
+from .models import Movie, Category, Actor
 
 
 class MovieView(ListView):
     model = Movie
     queryset = Movie.objects.filter(draft=False)
-    template_name = "movie_movies.html"
+    # template_name = "movie_movies.html"
 
 
 class MovieDetailView(DetailView):
@@ -30,3 +30,9 @@ class AddReview(View):
             form.movie = movie
             form.save()
         return redirect(movie.get_absolute_url())
+
+
+class ActorView(DetailView):
+    model = Actor
+    template_name = 'movie/actor.html'
+    slug_field = 'name'

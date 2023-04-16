@@ -67,7 +67,7 @@ class MovieAdmin(admin.ModelAdmin):
             "fields": (("actors", "directors", "genres", "category"),)
         }),
         (None, {
-            "fields": (("budget", "fees_in_usa", "fess_in_world"),)
+            "fields": (("budget", "fee_in_usa", "fee_in_world"),)
         }),
         ("Options", {
             "fields": (("url", "draft"),)

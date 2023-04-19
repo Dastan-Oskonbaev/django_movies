@@ -128,11 +128,11 @@ class ActorAdmin(admin.ModelAdmin):
 
 @admin.register(Rating)
 class RatingAdmin(admin.ModelAdmin):
-    list_display = ('movie', 'ip')
+    list_display = ('star', 'movie', 'ip')
 
 
 @admin.register(MovieShorts)
-class RatingAdmin(admin.ModelAdmin):
+class MovieShortsAdmin(admin.ModelAdmin):
     list_display = ('title', 'movie', 'get_image')
     readonly_fields = ('get_image',)
 

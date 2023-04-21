@@ -1,7 +1,6 @@
 from django import forms
-
-from .models import Reviews, RatingStar, Rating
 from snowpenguin.django.recaptcha3.fields import ReCaptchaField
+from .models import Reviews, RatingStar, Rating
 
 
 class ReviewForm(forms.ModelForm):
